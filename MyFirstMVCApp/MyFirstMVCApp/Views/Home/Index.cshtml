@@ -1,0 +1,50 @@
+﻿@model IEnumerable<string>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<h1>
+    Hello world from view
+
+</h1>
+
+<div>
+    2 + 2 = @(2 + 2)
+</div>
+<div>it is @DateTime.Now</div>
+@if (ViewBag.Something != null)
+{
+    <div>@ViewBag.Something</div>
+}
+else
+{
+    <div>Nothing</div>
+}
+<select>
+
+    @foreach (var r in Model)
+    {
+
+        <option class="foo">@r</option>
+    }
+    @foreach (var r in ViewData.Model)
+    {
+        <option>@r</option>
+    }
+</select>
+@Html.ActionLink("click here for help", "Help")
+<div>Enter your favorite restaurant</div>
+@using (Html.BeginForm())
+{
+    @Html.TextBox("favoriteRestaurant", "Blaze", new {@class="edit"})
+    <button type="submit">Submit</button>
+    
+}
+</body>
+</html>
