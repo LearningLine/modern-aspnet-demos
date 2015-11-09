@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+You entered id: @Model
+
+@Html.ActionLink("link for id 3", "Index", "Home",new
+{
+    id=3
+}, new
+{
+    @class="btn btn-primary"
+})

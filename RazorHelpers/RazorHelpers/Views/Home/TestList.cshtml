@@ -1,0 +1,16 @@
+﻿@model RazorHelpers.Models.Gamer
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>title</h2>
+
+@*
+    @Html.TextBox("name", Model.Name)
+    @Html.TextBox("level", Model.Level)
+    @Html.DropDownList("games", Model.Games)
+*@
+
+@Html.TextBoxFor(m => m.FirstName, new {@class="text"})
+@Html.TextBoxFor(m => m.Level)
+@Html.DropDownListFor(m=> m.Games, Model.Games)

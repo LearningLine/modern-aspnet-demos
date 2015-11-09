@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/views/shared/_TestLayout.cshtml";
+}
+
+<h2>products on sale</h2>
+@Html.Partial("Products")
+
+@section footer
+{
+    <div> this is a footer!</div>
+}
+

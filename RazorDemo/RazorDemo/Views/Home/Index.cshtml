@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Home Page";
+    
+}
+
+@Html.Partial("Products")
+
+
+<div> 2 + 2 = @(2 + 2)</div>
+<div> this @@ sign is used in razor</div>
+@{
+    var env = Environment.MachineName;
+}
+
+this machine name is @env
+<div>
+    this is a comment <!-- comment here -->
+    this is a razor comment @* comment is here*@
+</div>
+
+@{
+    var cars = new[] {"Tesla2", "BMW", "Cadillac", "VW"};
+}
+@Assembly.GetExecutingAssembly().CodeBase
+@foreach (var car in cars)
+{
+    var s = " is a car";
+    <text>@car</text>
+    @: is a car
+    @s
+}

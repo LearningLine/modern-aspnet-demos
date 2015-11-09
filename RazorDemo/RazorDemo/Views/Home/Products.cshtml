@@ -1,0 +1,5 @@
+﻿@model IEnumerable<Product>
+@foreach (var product in Model)
+{
+    @Html.Partial("Product", product)
+}
