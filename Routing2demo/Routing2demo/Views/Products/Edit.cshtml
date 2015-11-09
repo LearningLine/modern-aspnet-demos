@@ -1,0 +1,13 @@
+﻿@model Routing2demo.Models.Product
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2></h2>
+@using (Html.BeginForm())
+{
+    @Html.Hidden("id", Model.Id)
+    @Html.TextBox("text", Model.Name)
+    <button type="submit">Save</button>
+}

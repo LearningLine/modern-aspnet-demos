@@ -1,0 +1,12 @@
+﻿@model Routing2demo.Models.Product
+
+@{
+    ViewBag.Title = "title";
+   
+}
+
+<h2>title</h2>
+
+@Model.Name
+
+@Html.ActionLink("Edit", "Edit", new {Model.Id})
