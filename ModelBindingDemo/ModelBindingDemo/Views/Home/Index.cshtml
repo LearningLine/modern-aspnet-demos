@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Update", "Home"))
+{
+    @Html.Hidden("id", "234")
+    <div class="input-group">
+        <div>First Name</div>
+        @Html.TextBox("firstName", "")
+    </div>
+    <div class="input-group">
+        <div>LastName</div>
+        @Html.TextBox("lastName", "")
+    </div>
+    <div class="panel-heading">
+        Shipping
+    </div>
+    <div class="input-group">
+        <div>Street</div>
+        @Html.TextBox("shipping.street", "")
+    </div>
+    <div class="input-group">
+        <div>State</div>
+        @Html.TextBox("shipping.state", "")
+    </div>
+    <div class="panel-heading">
+        Billing
+    </div>
+    <div class="input-group">
+        <div>Street</div>
+        @Html.TextBox("billing.street", "")
+    </div>
+    <div class="input-group">
+        <div>City</div>
+        @Html.TextBox("billing.city", "")
+    </div>
+    <div class="input-group">
+        <div>Zip code</div>
+        @Html.TextBox("billing.zipCode", "")
+    </div>
+    <div class="input-group">
+        <div>State</div>
+        @Html.TextBox("billing.state", "")
+    </div>
+    <div class="input-group">
+        <div>Country</div>
+        @Html.TextBox("billing.country", "")
+    </div>
+
+    <div class="input-group">
+        <div>Bagel 1 Name</div>
+        @Html.TextBox("bagel.name", "")
+    </div>
+    <div class="input-group">
+        <div>Bagel 1 Option</div>
+        @Html.TextBox("bagel.option", "")
+    </div>
+
+    <div class="input-group">
+        <div>Bagel 2 Name</div>
+        @Html.TextBox("bagel.name", "")
+    </div>
+    <div class="input-group">
+        <div>Bagel 2 Option</div>
+        @Html.TextBox("bagel.option", "")
+    </div>
+
+
+
+    <div class="btn-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+}

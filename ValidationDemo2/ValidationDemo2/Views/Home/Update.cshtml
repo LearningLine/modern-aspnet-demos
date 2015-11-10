@@ -1,0 +1,40 @@
+﻿@model ValidationDemo2.Models.Employee
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Edit Employe</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.Id)
+    <div class="input-group">
+        <div>Enter a name here:</div>
+        @Html.TextBoxFor(m => m.Name)<span></span>
+        @Html.ValidationMessage("Name")
+
+    </div>
+    <div class="input-group">
+        <div>Enter your age:</div>
+        @Html.TextBoxFor(m => m.Age)<span></span>
+        @Html.ValidationMessageFor(x => x.Age)
+
+    </div>
+    <a class="btn btn-primary" role="button" 
+       data-toggle="collapse" href="#privateStuff" aria-expanded="false" aria-controls="collapseExample">
+        Private info
+    </a>
+    
+    <div class="collapse" id="privateStuff">
+        <div class="well">
+            <div class="form-group">
+                <div>Enter your age:</div>
+                @Html.TextBoxFor(m => m.Age)<span></span>
+                @Html.ValidationMessageFor(x => x.Age)
+            </div>
+        </div>
+    </div>
+    @Html.ValidationSummary()
+    <button type="submit">Submit</button>
+}
