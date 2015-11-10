@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+<body>
+<script type="text/html" id="surveyTemplate">
+    <div>
+        <span data-bind="text:question"></span>
+
+        <input type="checkbox" data-bind="checked:isVisible"/>
+        <span>Visible?</span>
+        <input type="date" data-bind="value:created"/>
+    </div>
+</script>
+<div>
+    Hello this is a survey
+    <div>
+        <div data-bind="template:{name:'surveyTemplate', foreach: surveys}">
+            
+        </div>
+        <div>
+            <input type="text" data-bind="value:newSurveyText"/>
+            <input type="checkbox" data-bind="checked:newSurveyIsVisible"/>
+        </div>
+        <button data-bind="click:add">Add new survey</button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+<script src="arrays.js"></script>
+</body>
+</html>

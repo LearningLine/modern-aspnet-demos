@@ -1,0 +1,21 @@
+<html>
+<head>
+
+</head>
+<body>
+<div>
+    Hello this is a survey
+    <div>
+        <span data-bind="text:question"></span>
+        <input data-bind="value:response"/>
+        <input data-bind="value:width" />
+        <input data-bind="value:height"/>
+        <span data-bind="text: surface"></span>
+ <div 
+             data-bind="style:{background:response, height:height, width:width}"></div>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
