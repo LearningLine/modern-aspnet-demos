@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "AmazingDeals"
+  },
+  "hostingPlanName": {
+    "value": "serviceplan"
+  },
+  "siteLocation": {
+    "value": "West US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "c747441d-13a5-42e6-a6aa-3b8c70e413cb"
+  },
+  "resourceGroup": {
+    "value": "test"
+  }
+}

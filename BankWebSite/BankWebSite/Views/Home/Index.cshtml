@@ -1,0 +1,20 @@
+﻿@model int
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>Your balance is $ @Model</div>
+
+@using (Html.BeginForm("SendMoney", "Home"))
+{
+    @Html.AntiForgeryToken()
+    <div class="input-group">
+        <div>Amount</div>
+        @Html.TextBox("amount")
+    </div>
+    <div class="input-group">
+        <div>Recipient</div>
+        @Html.TextBox("recipient")
+    </div>
+    <button type="submit">Submit</button>
+}
